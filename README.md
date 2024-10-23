@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Twitch Live Stream Embed - Juan Amaral
+Este projeto é uma página simples em Next.js que incorpora uma live do canal Juan Amaral no Twitch, juntamente com o chat ao vivo em modo escuro (dark mode).
 
-## Getting Started
+## Funcionalidades
+Player de vídeo ao vivo da Twitch.
+Chat ao vivo da Twitch, ambos no modo escuro.
+Layout responsivo usando Tailwind CSS.
+## Como começar
+### 1. Clonar o repositório:
+bash
+Copiar código
+git clone https://github.com/seu-usuario/twitch-live-stream-embed.git
+cd twitch-live-stream-embed
+### 2. Instalar as dependências:
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
+``` bash
+yarn install
+```
+### 3. Iniciar o projeto:
+``` bash
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+O site estará disponível em http://localhost:3000.
+
+
+## Estrutura do Código
+Este projeto usa Next.js e Tailwind CSS para o layout e estilização. Abaixo está a explicação de cada parte do código principal.
+
+javascript
+``` 
+export default function Home() {
+  return (
+    <div className="min-h-screen items-center justify-items-center p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <div className="flex gap-8 xl:flex-row flex-col w-full">
+        <div className="xl:w-4/5 w-full">
+          <iframe
+            src="https://player.twitch.tv/?channel=juanamaral&parent=twitchlivejuan.vercel.app&darkpopout"
+            height="720"
+            width="100%"
+            allowFullScreen={true}
+          ></iframe>
+        </div>
+        <div className="xl:w-1/5 w-full">
+          <iframe
+            src="https://www.twitch.tv/embed/juanamaral/chat?parent=twitchlivejuan.vercel.app&darkpopout"
+            height="720"
+            width="100%"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  );
+}
+```
+## 4. **Chat da Twitch**
+
+Para incorporar o chat ao vivo da Twitch, utilizamos outro `iframe`.
+
+```html
+<iframe
+  src="https://www.twitch.tv/embed/juanamaral/chat?parent=twitchlivejuan.vercel.app&darkpopout"
+  height="720"
+  width="100%"
+></iframe>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Pensou por 18 segundos
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Claro! Aqui está a seção formatada em Markdown com títulos (##, ####) e blocos de código (```), pronta para ser adicionada ao seu README.md:
 
-## Learn More
+markdown
+Copiar código
+#### 4. **Chat da Twitch**
 
-To learn more about Next.js, take a look at the following resources:
+Para incorporar o chat ao vivo da Twitch, utilizamos outro `iframe`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```html
+<iframe
+  src="https://www.twitch.tv/embed/juanamaral/chat?parent=twitchlivejuan.vercel.app&darkpopout"
+  height="720"
+  width="100%"
+></iframe>
+```
+### Explicação do src:
+* https://www.twitch.tv/embed/: URL base para o chat embutido do Twitch.
+* juanamaral/chat: Especifica o canal cujo chat está sendo incorporado (juanamaral).
+* ?parent=twitchlivejuan.vercel.app: Parâmetro obrigatório para informar o domínio onde o chat está sendo exibido.
+* &darkpopout: Ativa o modo escuro no chat, mantendo o tema do site.
