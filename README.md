@@ -1,5 +1,6 @@
 # Twitch Live Stream Embed - Juan Amaral
 Este projeto é uma página simples em Next.js que incorpora uma live do canal Juan Amaral no Twitch, juntamente com o chat ao vivo em modo escuro (dark mode).
+https://twitchlivejuan.vercel.app/
 
 ## Funcionalidades
 Player de vídeo ao vivo da Twitch.
