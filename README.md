@@ -53,26 +53,8 @@ export default function Home() {
   );
 }
 ```
-## 4. **Chat da Twitch**
 
-Para incorporar o chat ao vivo da Twitch, utilizamos outro `iframe`.
-
-```html
-<iframe
-  src="https://www.twitch.tv/embed/juanamaral/chat?parent=twitchlivejuan.vercel.app&darkpopout"
-  height="720"
-  width="100%"
-></iframe>
-```
-
-
-Pensou por 18 segundos
-
-Claro! Aqui está a seção formatada em Markdown com títulos (##, ####) e blocos de código (```), pronta para ser adicionada ao seu README.md:
-
-markdown
-Copiar código
-#### 4. **Chat da Twitch**
+#### **Chat da Twitch**
 
 Para incorporar o chat ao vivo da Twitch, utilizamos outro `iframe`.
 
